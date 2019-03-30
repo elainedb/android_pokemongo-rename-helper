@@ -1,100 +1,55 @@
 package dev.elainedb.pokemongorenamehelper
 
-import android.content.ComponentName
-import android.content.Context
-import android.content.Intent
-import android.content.ServiceConnection
-import androidx.appcompat.app.AppCompatActivity
+import android.app.Activity
 import android.os.Bundle
-import android.os.IBinder
 import android.view.View
-import android.app.NotificationChannel
-import android.app.NotificationManager
-import android.graphics.Color
+import android.util.Log
+import kotlinx.android.synthetic.main.activity_main.*
 
+class MainActivity : Activity() {
 
-class MainActivity : AppCompatActivity() {
+    private lateinit var uiModel: MainUi
+    private lateinit var mNotificationHelper: NotificationHelper
+
+    companion object {
+        private val TAG = MainActivity::class.java.simpleName
+
+        private const val NOTIFICATION = 1300
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        val notificationManager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
-
-        val channelId = "some_channel_id"
-        val channelName = "Some Channel"
-        val importance = NotificationManager.IMPORTANCE_LOW
-        val notificationChannel = NotificationChannel(channelId, channelName, importance)
-        notificationChannel.enableLights(true)
-        notificationChannel.lightColor = Color.RED
-        notificationChannel.enableVibration(true)
-        notificationChannel.vibrationPattern = longArrayOf(100, 200, 300, 400, 500, 400, 300, 200, 400)
-        notificationManager.createNotificationChannel(notificationChannel)
+        mNotificationHelper = NotificationHelper(this)
+        uiModel = MainUi()
     }
 
-    private var mNotifService: NotifService? = null
-    private var mNotifBound = false
-
-//    override fun onCreate(savedInstanceState: Bundle?) {
-//        super.onCreate(savedInstanceState)
-//        setContentView(R.layout.sample_main)
-//    }
-
-    /**
-     * Create and show a notification with a custom layout.
-     * This callback is defined through the 'onClick' attribute of the
-     * 'Show Notification' button in the XML layout.
-     *
-     * @param v
-     */
-    fun showNotificationClicked(v: View) {
-        mNotifService!!.createNotification()
-    }
-
-    //connect to the NotifService
-    private val notifConnection = object : ServiceConnection {
-
-        override fun onServiceConnected(name: ComponentName, service: IBinder) {
-            val binder = service as NotifService.NotifBinder
-            mNotifService = binder.service
-            mNotifBound = true
-        }
-
-        override fun onServiceDisconnected(name: ComponentName) {
-            mNotifService = null
-            mNotifBound = false
+    private fun sendNotification(id: Int) {
+        when (id) {
+            NOTIFICATION -> mNotificationHelper.notify(
+                id, mNotificationHelper.getNotification(
+                    getString(R.string.title),
+                    getString(R.string.body)
+                )
+            )
         }
     }
 
-    private fun doUnbindNotifService() {
-        unbindService(notifConnection)
-        mNotifBound = false
-    }
+    internal inner class MainUi : View.OnClickListener {
 
-    private fun doBindToNotifService() {
-        if (!mNotifBound) {
-            val bindIntent = Intent(this, NotifService::class.java)
-            mNotifBound = bindService(bindIntent, notifConnection, Context.BIND_AUTO_CREATE)
+        init {
+            button.setOnClickListener(this)
+//            dm_channel_settings_button.setOnClickListener(this)
+//            go_to_settings_button.setOnClickListener(this)
         }
-    }
 
-    override fun onStart() {
-        super.onStart()
-        doBindToNotifService()
-    }
-
-    override fun onStop() {
-        super.onStop()
-        doUnbindNotifService() // HMMMMMM
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-
-        if (isFinishing) {
-            //            stop service as activity being destroyed and we won't use it any more
-            val intentStopService = Intent(this, NotifService::class.java)
-            stopService(intentStopService)
+        override fun onClick(view: View) {
+            when (view.id) {
+                R.id.button -> sendNotification(NOTIFICATION)
+//                R.id.dm_channel_settings_button -> goToNotificationChannelSettings(DM_CHANNEL)
+//                R.id.go_to_settings_button -> goToNotificationSettings()
+                else -> Log.e(TAG, getString(R.string.error_click))
+            }
         }
     }
 }

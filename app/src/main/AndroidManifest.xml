@@ -16,8 +16,7 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <receiver android:name="NotifService$ClickButtonListener" />
-        <service android:name=".NotifService" />
+        <receiver android:name="NotificationHelper$ClickNotificationBroadcastReceiver" />
     </application>
 
 </manifest>

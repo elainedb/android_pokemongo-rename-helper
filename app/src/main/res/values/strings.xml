@@ -36,9 +36,11 @@
         layout resource and inflated as a <b>RemoteViews</b> object.
         \n\nOn API level 16 and above, a different layout is inflated and set as
         the <i>big content view</i>, which is used when the notification is expanded.
-        \n\n<b>Use the button below to create the notification.
+        \n\n
+        <b>Use the button below to create the notification.
             \n\nIf your device is running Jelly Bean or above, try expanding or collapsing
-            the notification to see the different layouts.</b>
+            the notification to see the different layouts.
+        </b>
     </string>
     <string name="collapsed_image" translatable="false">A single Android robot waving. Symbolises a collapsed
         notification.
@@ -82,5 +84,10 @@
         <item>@string/type_ghost</item>
         <item>@string/type_dragon</item>
     </string-array>
+
+    <string name="channel_name">Pokémon Channel</string>
+    <string name="title">Title</string>
+    <string name="body">Body</string>
+    <string name="error_click">Unknown click event.</string>
 
 </resources>
