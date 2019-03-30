@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="bug_normal">#33A8B820</color>
+    <color name="bug_dark">#6D7815</color>
+    <color name="dragon_normal">#337038F8</color>
+    <color name="dragon_dark">#6d36ef</color>
+    <color name="electric_normal">#33F8D030</color>
+    <color name="electric_dark">#A1871F</color>
+    <color name="fighting_normal">#33C03028</color>
+    <color name="fighting_dark">#6D5E9C</color>
+    <color name="fire_normal">#33F08030</color>
+    <color name="fire_dark">#9C531F</color>
+    <color name="flying_normal">#33A890F0</color>
+    <color name="flying_dark">#6D5E9C</color>
+    <color name="ghost_normal">#33705898</color>
+    <color name="ghost_dark">#795da6</color>
+    <color name="grass_normal">#3378C850</color>
+    <color name="grass_dark">#4E8234</color>
+    <color name="ground_normal">#33E0C068</color>
+    <color name="ground_dark">#927D44</color>
+    <color name="ice_normal">#3398D8D8</color>
+    <color name="ice_dark">#638D8D</color>
+    <color name="normal_normal">#33A8A878</color>
+    <color name="normal_dark">#6D6D4E</color>
+    <color name="poison_normal">#33A040A0</color>
+    <color name="poison_dark">#ac45ac</color>
+    <color name="psychic_normal">#33F85888</color>
+    <color name="psychic_dark">#A13959</color>
+    <color name="rock_normal">#33B8A038</color>
+    <color name="rock_dark">#786824</color>
+    <color name="water_normal">#336890F0</color>
+    <color name="water_dark">#445E9C</color>
+
+    <!-- not gen 1 -->
+    <color name="fairy_normal">#33EE99AC</color>
+    <color name="fairy_dark">#9B6470</color>
+    <color name="steel_normal">#33B8B8D0</color>
+    <color name="steel_dark">#787887</color>
+    <color name="dark_normal">#33705848</color>
+    <color name="dark_dark">#a9846d</color>
+    <color name="unknown_normal">#3368A090</color>
+    <color name="unknown_dark">#44685E</color>
+
+    <color name="status">#8C888C</color>
+
+    <color name="notif_background">#333333</color>
+
+    <color name="red_background">#f44336</color>
+    <color name="green_background">#4caf50</color>
+    <color name="black_background">#000000</color>
+</resources>
