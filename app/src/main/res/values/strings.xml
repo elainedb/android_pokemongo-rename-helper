@@ -1,89 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-  * Copyright (C) 2013 The Android Open Source Project
-  * Licensed under the Apache License, Version 2.0 (the "License");
-  * you may not use this file except in compliance with the License.
-  * You may obtain a copy of the License at
-  *
-  *       http://www.apache.org/licenses/LICENSE-2.0
-  *
-  * Unless required by applicable law or agreed to in writing, software
-  * distributed under the License is distributed on an "AS IS" BASIS,
-  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-  * See the License for the specific language governing permissions and
-  * limitations under the License.
-  -->
-
 <resources>
     <string name="app_name" translatable="false">Pokemon Go Rename Helper</string>
-    <string name="intro_message" translatable="false">
-        <![CDATA[
-
-
-            This sample demonstrates notifications with custom content views.
-
-
-        ]]>
-    </string>
-    <string name="expanded" translatable="false">I\'m the expanded notification.\nCollapse me!</string>
-    <string name="collapsed" translatable="false">I\'m the collapsed notification.\nCreated at: %s</string>
+    <string name="collapsed" translatable="false">Please expand the notification.</string>
     <string name="show_notification" translatable="false">Show Notification</string>
-    <string name="custom_notification" translatable="false">I\'m a custom notification.</string>
 
-    <string name="intro_text" translatable="false">This sample demonstrates how a notification is created using the
-        <b>NotificationCompatBuilder</b>
-        with a custom content view. The layout of the notification is defined as a
-        layout resource and inflated as a <b>RemoteViews</b> object.
-        \n\nOn API level 16 and above, a different layout is inflated and set as
-        the <i>big content view</i>, which is used when the notification is expanded.
-        \n\n
-        <b>Use the button below to create the notification.
-            \n\nIf your device is running Jelly Bean or above, try expanding or collapsing
-            the notification to see the different layouts.
+    <string name="intro_text" translatable="false">This app allows to show a notification and easily copy IV values to your clipboard.
+        \n\nThe last 3 values you tapped will be on your clipboard. After you\'ve tapped the wanted values, you can paste them on Pokémon Go.
+        \n\n<b>Use the button below to create the notification.
+            \n\nPlease expand the notification (by dragging it) to see the values.
+            \n\nOnce you\'re finished, you can dismiss the notification.
         </b>
     </string>
-    <string name="collapsed_image" translatable="false">A single Android robot waving. Symbolises a collapsed
-        notification.
-    </string>
-    <string name="expanded_image" translatable="false">Two Androids on top of each other. Symbolises an expanded
-        notification.
-    </string>
 
-    <string name="type_normal">0</string>
-    <string name="type_fire">1</string>
-    <string name="type_water">2</string>
-    <string name="type_electric">3</string>
-    <string name="type_grass">4</string>
-    <string name="type_ice">5</string>
-    <string name="type_fighting">6</string>
-    <string name="type_poison">7</string>
-    <string name="type_ground">8</string>
-    <string name="type_flying">9</string>
-    <string name="type_psychic">10</string>
-    <string name="type_bug">11</string>
-    <string name="type_rock">12</string>
-    <string name="type_ghost">13</string>
-    <string name="type_dragon">14</string>
-    <string name="type_dark">15</string>
-    <string name="type_fairy">Fairy</string>
-
-    <string-array name="type_array">
-        <item>@string/type_normal</item>
-        <item>@string/type_fire</item>
-        <item>@string/type_water</item>
-        <item>@string/type_electric</item>
-        <item>@string/type_grass</item>
-        <item>@string/type_ice</item>
-        <item>@string/type_fighting</item>
-        <item>@string/type_poison</item>
-        <item>@string/type_ground</item>
-        <item>@string/type_flying</item>
-        <item>@string/type_psychic</item>
-        <item>@string/type_bug</item>
-        <item>@string/type_rock</item>
-        <item>@string/type_ghost</item>
-        <item>@string/type_dragon</item>
-    </string-array>
+    <string name="value_0">0</string>
+    <string name="value_1">1</string>
+    <string name="value_2">2</string>
+    <string name="value_3">3</string>
+    <string name="value_4">4</string>
+    <string name="value_5">5</string>
+    <string name="value_6">6</string>
+    <string name="value_7">7</string>
+    <string name="value_8">8</string>
+    <string name="value_9">9</string>
+    <string name="value_10">10</string>
+    <string name="value_11">11</string>
+    <string name="value_12">12</string>
+    <string name="value_13">13</string>
+    <string name="value_14">14</string>
+    <string name="value_15">15</string>
 
     <string name="channel_name">Pokémon Channel</string>
     <string name="title">Title</string>
