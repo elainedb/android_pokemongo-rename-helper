@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name" translatable="false">Pokemon Go Rename Helper</string>
-    <string name="collapsed" translatable="false">Please expand the notification.</string>
     <string name="show_notification" translatable="false">Show Notification</string>
 
     <string name="intro_text" translatable="false">This app allows to show a notification and easily copy IV values to your clipboard.
         \n\nThe last 3 values you tapped will be on your clipboard. After you\'ve tapped the wanted values, you can paste them on Pokémon Go.
         \n\n<b>Use the button below to create the notification.
-            \n\nPlease expand the notification (by dragging it) to see the values.
+            \n\nYou can expand the notification (by dragging it) to see all the values.
             \n\nOnce you\'re finished, you can dismiss the notification.
         </b>
     </string>

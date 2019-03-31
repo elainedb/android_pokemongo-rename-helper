@@ -48,18 +48,18 @@ internal class NotificationHelper(context: Context) : ContextWrapper(context) {
 
     fun getNotification(title: String, body: String): Notification.Builder {
         val contentView = RemoteViews(packageName, R.layout.notification)
-        val text = resources.getString(R.string.collapsed)
-        contentView.setTextViewText(R.id.textView, text)
-
         val expandedView = RemoteViews(packageName, R.layout.notification_expanded)
 
-        val ids = listOf(
+        val ids = listOf(R.id.ll_10, R.id.ll_11, R.id.ll_12, R.id.ll_13, R.id.ll_14, R.id.ll_15)
+        val expandedIds = listOf(
             R.id.ll_0, R.id.ll_1, R.id.ll_2, R.id.ll_3, R.id.ll_4, R.id.ll_5,
-            R.id.ll_6, R.id.ll_7, R.id.ll_8, R.id.ll_9, R.id.ll_10,
-            R.id.ll_11, R.id.ll_12, R.id.ll_13, R.id.ll_14, R.id.ll_15
-        )
+            R.id.ll_6, R.id.ll_7, R.id.ll_8, R.id.ll_9
+        ) + ids
 
         ids.forEachIndexed { index, id ->
+            initPendingSwitchIntent(contentView, index + 10, id)
+        }
+        expandedIds.forEachIndexed { index, id ->
             initPendingSwitchIntent(expandedView, index, id)
         }
 
