@@ -2,108 +2,94 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/notif_background"
+    android:background="@color/colorPrimaryDark"
     android:gravity="center">
 
     <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:columnCount="6">
+        android:layout_margin="@dimen/grid_margin"
+        android:columnCount="6"
+        android:stretchMode="spacingWidthUniform">
 
         <TextView
             android:id="@+id/ll_0"
             style="@style/NotifCellLayout"
-            android:text="@string/value_0"
-            android:textColor="@color/normal_dark" />
+            android:text="@string/value_0" />
 
         <TextView
             android:id="@+id/ll_1"
             style="@style/NotifCellLayout"
-            android:text="@string/value_1"
-            android:textColor="@color/fire_dark" />
+            android:text="@string/value_1" />
 
         <TextView
             android:id="@+id/ll_2"
             style="@style/NotifCellLayout"
-            android:text="@string/value_2"
-            android:textColor="@color/water_dark" />
+            android:text="@string/value_2" />
 
         <TextView
             android:id="@+id/ll_3"
             style="@style/NotifCellLayout"
-            android:text="@string/value_3"
-            android:textColor="@color/electric_dark" />
+            android:text="@string/value_3" />
 
         <TextView
             android:id="@+id/ll_4"
             style="@style/NotifCellLayout"
-            android:text="@string/value_4"
-            android:textColor="@color/grass_dark" />
+            android:text="@string/value_4" />
 
         <TextView
             android:id="@+id/ll_5"
             style="@style/NotifCellLayout"
-            android:text="@string/value_5"
-            android:textColor="@color/ice_dark" />
+            android:text="@string/value_5" />
 
         <TextView
             android:id="@+id/ll_6"
             style="@style/NotifCellLayout"
-            android:text="@string/value_6"
-            android:textColor="@color/fighting_dark" />
+            android:text="@string/value_6" />
 
         <TextView
             android:id="@+id/ll_7"
             style="@style/NotifCellLayout"
-            android:text="@string/value_7"
-            android:textColor="@color/poison_dark" />
+            android:text="@string/value_7" />
 
         <TextView
             android:id="@+id/ll_8"
             style="@style/NotifCellLayout"
-            android:text="@string/value_8"
-            android:textColor="@color/ground_dark" />
+            android:text="@string/value_8" />
 
         <TextView
             android:id="@+id/ll_9"
             style="@style/NotifCellLayout"
-            android:text="@string/value_9"
-            android:textColor="@color/flying_dark" />
+            android:text="@string/value_9" />
 
         <TextView
             android:id="@+id/ll_10"
             style="@style/NotifCellLayout"
-            android:text="@string/value_10"
-            android:textColor="@color/psychic_dark" />
+            android:text="@string/value_10" />
 
         <TextView
             android:id="@+id/ll_11"
             style="@style/NotifCellLayout"
-            android:text="@string/value_11"
-            android:textColor="@color/bug_dark" />
+            android:text="@string/value_11" />
 
         <TextView
             android:id="@+id/ll_12"
             style="@style/NotifCellLayout"
-            android:text="@string/value_12"
-            android:textColor="@color/rock_dark" />
+            android:text="@string/value_12" />
 
         <TextView
             android:id="@+id/ll_13"
             style="@style/NotifCellLayout"
-            android:text="@string/value_13"
-            android:textColor="@color/ghost_dark" />
+            android:text="@string/value_13" />
 
         <TextView
             android:id="@+id/ll_14"
             style="@style/NotifCellLayout"
-            android:text="@string/value_14"
-            android:textColor="@color/dragon_dark" />
+            android:text="@string/value_14" />
 
         <TextView
             android:id="@+id/ll_15"
             style="@style/NotifCellLayout"
-            android:text="@string/value_15"
-            android:textColor="@color/dark_dark" />
+            android:text="@string/value_15" />
     </GridLayout>
 </LinearLayout>
