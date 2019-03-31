@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name" translatable="false">Pokemon Go Rename Helper</string>
+    <string name="app_name" translatable="false">Pokémon Go Rename Helper</string>
     <string name="show_notification" translatable="false">Show Notification</string>
 
     <string name="intro_text" translatable="false">This app allows to show a notification and easily copy IV values to your clipboard.
